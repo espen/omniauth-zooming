@@ -3,14 +3,13 @@ require 'multi_json'
 
 module OmniAuth
   module Strategies
-    class Zoomer < OmniAuth::Strategies::OAuth2
-      option :name, "zoomer"
+    class Zoom < OmniAuth::Strategies::OAuth2
+      option :name, "zoom"
       option :client_options, {
         token_url: "https://zoom.us/oauth/token",
         authorize_url: "https://zoom.us/oauth/authorize",
         site: "https://zoom.us"
       }
-      option :environment, :production
 
       info do
         {
@@ -47,3 +46,5 @@ module OmniAuth
 
   end
 end
+
+OmniAuth.config.add_camelization 'zoom', 'Zoom'

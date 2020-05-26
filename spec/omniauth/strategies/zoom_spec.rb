@@ -1,9 +1,9 @@
 require 'spec_helper'
-require 'omniauth-zoomer'
+require 'omniauth-zoom'
 
-describe OmniAuth::Strategies::Zoomer do
+describe OmniAuth::Strategies::Zoom do
   subject do
-    strategy = OmniAuth::Strategies::Zoomer.new(nil, @options || {})
+    strategy = OmniAuth::Strategies::Zoom.new(nil, @options || {})
     strategy.stub(:session) { {} }
     strategy
   end
@@ -11,7 +11,7 @@ describe OmniAuth::Strategies::Zoomer do
   it_should_behave_like 'an oauth2 strategy'
 
   describe '#client' do
-    it 'should have the correct zoomer site' do
+    it 'should have the correct zoom site' do
       subject.client.site.should eq("https://zoom.us")
     end
 
@@ -27,7 +27,7 @@ describe OmniAuth::Strategies::Zoomer do
 
   describe '#callback_path' do
     it 'should have the correct callback path' do
-      subject.callback_path.should eq('/auth/zoomer/callback')
+      subject.callback_path.should eq('/auth/zoom/callback')
     end
   end
 

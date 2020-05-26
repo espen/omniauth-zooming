@@ -7,5 +7,5 @@ end
 
 guard 'bundler' do
   watch('Gemfile')
-  watch('omniauth-zoomer.gemspec')
+  watch('omniauth-zoom.gemspec')
 end

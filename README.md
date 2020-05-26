@@ -1,4 +1,4 @@
-# OmniAuth zoomer
+# OmniAuth zoom
 
 This gem contains the unofficial Zoom strategy for OmniAuth.
 
@@ -9,7 +9,7 @@ For more information about the API see https://marketplace.zoom.us/docs/api-refe
 ## Basic Usage
 
     use OmniAuth::Builder do
-      provider "Zoomer", ENV['ZOOM_CLIENT_ID'], ENV['ZOOM_CLIENT_SECRET']
+      provider :zoom, ENV['ZOOM_CLIENT_ID'], ENV['ZOOM_CLIENT_SECRET']
     end
 
 
@@ -20,15 +20,15 @@ The retrieved ```access_token``` expires in one hour. So you need to retrieve a 
 Example:
 
 ```ruby
-if Time.at( zoomer_access_token_expires_at ).past?
-  oauth = OmniAuth::Strategies::Zoomer.new(nil, {
-    client_id: ENV['zoomer_CLIENT_ID'],
-    client_secret: ENV['zoomer_CLIENT_SECRET']
+if Time.at( zoom_access_token_expires_at ).past?
+  oauth = OmniAuth::Strategies::Zoom.new(nil, {
+    client_id: ENV['zoom_CLIENT_ID'],
+    client_secret: ENV['zoom_CLIENT_SECRET']
   }
   token = OAuth2::AccessToken.new(
     oauth.client,
-    zoomer_access_token,
-    { refresh_token: zoomer_refresh_token }
+    zoom_access_token,
+    { refresh_token: zoom_refresh_token }
   )
   new_tokens = token.refresh!
 end
