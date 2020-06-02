@@ -5,6 +5,7 @@ module OmniAuth
   module Strategies
     class Zoom < OmniAuth::Strategies::OAuth2
       option :name, "zoom"
+      option :provider_ignores_state, true
       option :client_options, {
         token_url: "https://zoom.us/oauth/token",
         authorize_url: "https://zoom.us/oauth/authorize",
