@@ -2,7 +2,7 @@
 
 This gem contains the unofficial Zoom strategy for OmniAuth.
 
-See the [authorization documentation](https://marketplace.zoom.us/docs/guides/auth/oauth for Zoom.
+See the [authorization documentation](https://marketplace.zoom.us/docs/guides/auth/oauth) for Zoom.
 
 For more information about the API see https://marketplace.zoom.us/docs/api-reference/introduction.
 
