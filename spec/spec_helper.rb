@@ -4,7 +4,7 @@ $:.unshift File.expand_path('../../lib', __FILE__)
 require 'rspec'
 require 'rack/test'
 require 'omniauth'
-require 'omniauth-zoom'
+require 'omniauth-zooming'
 
 Dir[File.expand_path('../support/**/*', __FILE__)].each { |f| require f }
 

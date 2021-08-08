@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'omniauth-zoom'
+require 'omniauth-zooming'
 
 describe OmniAuth::Strategies::Zoom do
   subject do

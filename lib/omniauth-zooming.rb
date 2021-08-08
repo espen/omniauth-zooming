@@ -1,2 +1,2 @@
-require "omniauth-zoom/version"
+require "omniauth-zooming/version"
 require "omniauth/strategies/zoom"
